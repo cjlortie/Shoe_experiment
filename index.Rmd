@@ -1,0 +1,38 @@
+---
+title: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+<br>  
+
+![](./shoe.JPG){width=50%}
+
+## Colour perception in humans  
+Hypothesis  
+People perceive colours differently, and this perception is fluent not fixed.  
+
+Predictions  
+1. An object with ambiguous colours can be perceived as different palettes by different people.  
+2. Hemisphere dominance or handedness influences colour perception.  
+3. Tasks can switch colour perception.  
+
+#### Data
+```{r data}
+library(tidyverse)
+library(gsheet)
+data <- gsheet2tbl('docs.google.com/spreadsheets/d/1u677DhVI3dkR3fSNorPrz9NtrD_qnqT5GGnyLnO2deA') %>% 
+  select(2:4) %>% 
+  rename(colour = 1, switch = 2, handedness = 3) %>% 
+  as_tibble()
+
+write_csv(data, "data/data.csv")
+
+```
+
+### Viz
+
+
