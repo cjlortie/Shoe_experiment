@@ -1,19 +1,19 @@
-colour,switch,handedness
-grey-blue,"no, same colour palette as last time",right
-pink-white,"no, same colour palette as last time",left
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"yes, the colour palette switched",right
-pink-white,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",left
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-pink-white,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-pink-white,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
-grey-blue,"no, same colour palette as last time",right
+colour,switched,handedness
+grey-blue,no,right
+pink-white,no,left
+grey-blue,no,right
+grey-blue,yes,right
+pink-white,no,right
+grey-blue,no,right
+grey-blue,no,left
+grey-blue,no,right
+grey-blue,no,right
+pink-white,no,right
+grey-blue,no,right
+pink-white,no,right
+grey-blue,no,right
+grey-blue,no,right
+grey-blue,no,right
+grey-blue,no,right
+grey-blue,no,right
+grey-blue,no,right

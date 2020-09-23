@@ -26,13 +26,33 @@ library(tidyverse)
 library(gsheet)
 data <- gsheet2tbl('docs.google.com/spreadsheets/d/1u677DhVI3dkR3fSNorPrz9NtrD_qnqT5GGnyLnO2deA') %>% 
   select(2:4) %>% 
-  rename(colour = 1, switch = 2, handedness = 3) %>% 
-  as_tibble()
+  rename(colour = 1, switched = 2, handedness = 3) %>% 
+  as_tibble() %>% 
+  mutate(switched = gsub(",.*$", "", switched))
 
-write_csv(data, "data/data.csv")
+#write_csv(data, "data/data.csv")
 
 ```
 
 ### Viz
+```{r viz}
+ggplot(data, aes(colour, fill = switched)) +
+  geom_histogram(stat = "count") +
+  facet_wrap(~handedness) +
+  scale_fill_brewer(palette = "Set1")
+
+```
+
+
+### Models
+```{r models}
+counts <- data %>% 
+  group_by(colour, switched, handedness) %>% 
+  mutate(n = n())
+
+m1 <- glm(n ~ switched*handedness, family = poisson, data = counts)
+anova(m1, test = "Chisq")
+
+```
 
 
