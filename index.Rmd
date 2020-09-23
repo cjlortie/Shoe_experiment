@@ -30,6 +30,7 @@ data <- gsheet2tbl('docs.google.com/spreadsheets/d/1u677DhVI3dkR3fSNorPrz9NtrD_q
   as_tibble() %>% 
   mutate(switched = gsub(",.*$", "", switched))
 
+nrow(data)
 #write_csv(data, "data/data.csv")
 
 ```
